@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		/* base stuff */
+		@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;729;800&display=swap');
+
+		:root {
+			--primary-color: #1ea69a;
+			--primary-color-hover: #0C847A;
+			--secondary-color: #ea723d;
+
+			--warm-grey-50: #FAFAF9;
+			--warm-grey-100: #F5F5F4;
+			--warm-grey-200: #E7E5E4;
+			--warm-grey-300: #D6D3D1;
+			--warm-grey-400: #A8A29E;
+			--warm-grey-500: #78716C;
+			--warm-grey-800: #292524;
+
+			--green-800: #16A34A;
+			--amber-500: #F59E0B;
+		}
+
+		* { position: relative; box-sizing: border-box; transition-duration: 0.25s; }
+		html, body { 
+			padding: 0 !important; margin: 0 !important; background-color: var(--warm-grey-50); scroll-behavior: smooth;
+		}
+		html { font-family: 'Open Sans', sans-serif; font-size: 100%; font-weight: 300; color: var(--warm-grey-800); }
+		main { font-size: 1.25rem; line-height: 1.75rem; }
+		/*
+		::-webkit-scrollbar{ width: 1em; height: 1em; }
+		::-webkit-scrollbar-button{ width: 0; height: 0; }
+		::-webkit-scrollbar-thumb{ background: var(--warm-grey-800); border:0; }
+		::-webkit-scrollbar-thumb:hover{ background: var(--warm-grey-500) }
+		::-webkit-scrollbar-thumb:active{ background: var(--warm-grey-500) }
+		::-webkit-scrollbar-track{ background: var(--warm-grey-50); border:0 }
+		::-webkit-scrollbar-corner{ background:transparent}
+		*/
+		main { display: flex;	flex-direction: column;	}
+
+		h1 { font-size: 2rem; line-height: 1; font-weight: 800; text-transform: uppercase; }
+		h2 { font-size: 2rem; line-height: 1; font-weight: 729; text-transform: uppercase; }
+		p:first-child { margin-top: 0; }
+		p:last-child { margin-bottom: 0; }
+		a { color: var(--warm-grey-800); }
+
+		/* inline */
+		.text-left { text-align: left; }
+		.text-center { text-align: center; }
+		.text-right { text-align: right; }
+
+		.text-xs { font-size: 0.75rem; line-height: 1rem; }
+		.text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+		.text-base { font-size: 1rem; line-height: 1.5rem; }
+		.text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+		.text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+		.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+		.text-5xl	{ font-size: 3rem; line-height: 1; }
+
+		/* conteúdo */
+		content { display: flex; flex-direction: column; width: 100%; min-height: 100vh; margin: 96px 0 0 0; }
+		@media screen and (min-width: 1100px) {
+			content { margin: 50px 0 0 0; }
+		}
+
+		content.home {
+			margin: 0;
+		}
+
+		/* section */
+		section { margin: 0 auto; padding: 32px 20px; max-width: 1320px; }
+		section.fill { max-width: 100%; margin: 0; padding: 0; }
+		section:first-child { margin-top: 0; }
+		section:last-child { margin-bottom: 0; }
+
+		/* hero */
+		section.hero { min-height: calc(100vh - 96px); background-position: center; background-size: cover; }
+		@media screen and (min-width: 1100px) {
+			section.hero { min-height: calc(100vh - 50px); }
+		}
+
+		/* home */
+		section.home {
+			display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr);
+			margin: 0; padding: 0; width: 100%; max-width: none; min-height: 100vh; 
+		}
+
+		section.home * { position: relative; transition-duration: 0.5s; }
+
+		section.home > div { display: flex; flex-direction: column-reverse; overflow: hidden; background-color: red; }
+		section.home > div:nth-child(even) { background-color: blue; }
+
+		section.home > div:hover {
+			background-color: white;
+		}
+
+		/*
+		section.home > div > label { font-size: 3em; margin-left: 16px; color: transparent; }
+		section.home > div:hover > label { padding-bottom: 64px; color: black; }
+		*/
+
+		section.home > div > label { position: absolute; left: 16px; bottom: 0px; font-size: 3em; color: transparent; }
+		section.home > div:hover > label { bottom: 64px; color: black; }
+	</style>
+</head>
+<body>
+	<main>
+		<nav>
+		</nav>
+		<content class='home'>
+			<section class='home'>
+				<div><label>title</label></div>
+				<div><label>title</label></div>
+				<div><label>title</label></div>
+				<div><label>title</label></div>
+				<div><label>title</label></div>
+				<div><label>title</label></div>
+				<div><label>title</label></div>
+				<div><label>title</label></div>
+				<div><label>title</label></div>
+			</section>
+		</content>
+	</main>
+</body>
+<script src="https://kit.fontawesome.com/d435be3cbe.js" crossorigin="anonymous"></script>
+</html>
