@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Page Title</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<style>
+		.flex { display: flex; }
+
+		.colagem > .container {
+			display: grid;
+			grid-template-columns: 326px 209px 120px 113px;
+			grid-template-rows: 120px 166px 229px 76px 188px 52px;
+		}
+
+		.colagem > .container > div {
+			cursor: pointer;
+			background-size: contain;
+			background-blend-mode: multiply;
+			transition: background-color 0.5s ease;
+		}
+
+		.colagem > .container > div:hover {
+			background-color: white;
+		}
+
+		.colagem .item1 {
+			background-color: red;
+			background-image: url('menu/1.jpg');
+			grid-column: 1;	grid-row: 1 / span 2;
+		}
+		.colagem .item2 {
+			background-color: green;
+			background-image: url('menu/2.jpg');
+			grid-column: 2; grid-row: 1 / span 2;
+		}
+		.colagem .item3 {
+			background-color: blue;
+			background-image: url('menu/3.jpg');
+			grid-column: 3 / span 2; grid-row: 1;
+		}
+		.colagem .item4 {
+			background-color: cyan;
+			background-image: url('menu/4.jpg');
+			grid-column: 3 / span 2; grid-row: 2;
+		}
+		.colagem .item5 {
+			background-color: magenta;
+			background-image: url('menu/5.jpg');
+			grid-column: 3 / span 2; grid-row: 3 / span 2;
+		}
+		.colagem .item6 {
+			background-color: yellow;
+			background-image: url('menu/6.jpg');
+			grid-column: 2; grid-row: 3 / span 2;
+		}
+		.colagem .item7 {
+			background-color: indigo;
+			background-image: url('menu/7.jpg');
+			grid-column: 1; grid-row: 3;
+		}
+		.colagem .item8 {
+			background-color: crimson;
+			background-image: url('menu/8.jpg');
+			grid-column: 1; grid-row: 4 / span 3;
+		}
+		.colagem .item9 {
+			background-color: deeppink;
+			background-image: url('menu/9.jpg');
+			grid-column: 2 / span 2; grid-row: 5 / span 2;
+		}
+		.colagem .item10 {
+			background-color: chartreuse;
+			background-image: url('menu/10.jpg');
+			grid-column: 4; grid-row: 5;
+		}
+		.colagem .item11 {
+			background-color: lightseagreen;
+			background-image: url('menu/11.jpg');
+			grid-column: 4; grid-row: 6;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<section class='header'>
+
+		</section>
+		<section class='colagem'>
+			<div class='container'>
+				<div class="item1"></div>
+				<div class="item2"></div>
+				<div class="item3"></div>
+				<div class="item4"></div>
+				<div class="item5"></div>
+				<div class="item6"></div>
+				<div class="item7"></div>
+				<div class="item8"></div>
+				<div class="item9"></div>
+				<div class="item10"></div>
+				<div class="item11"></div>
+			</div>
+		</section>
+	</div>
+</body>
+</html>
