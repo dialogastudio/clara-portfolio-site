@@ -6,77 +6,87 @@
 	<title>Page Title</title>
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<style>
+	  @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+
 		.flex { display: flex; }
 
 		.colagem > .container {
 			display: grid;
-			grid-template-columns: 326px 209px 120px 113px;
-			grid-template-rows: 120px 166px 229px 76px 188px 52px;
+			/*grid-template-columns: 326px 209px 120px 113px;
+			grid-template-rows: 120px 166px 229px 76px 188px 52px;*/
+
+
+			grid-template-columns: 42.44% 27.21% 15.61% 14.71%;
+    	grid-template-rows: 14.44% 19.97% 27.55% 9.14% 22.62% 6.25%;
+    	width: 100%; 	max-width: 768px;
+			aspect-ratio: 768 / 831;
 		}
 
 		.colagem > .container > div {
-			cursor: pointer;
-			background-size: contain;
-			background-blend-mode: multiply;
-			transition: background-color 0.5s ease;
+			display: flex; justify-content: center; align-items: center; text-align: center;
+			color:white; font-family: 'Dosis', sans-serif; font-size: 1.5em;	
+			background-size: contain;	background-blend-mode: multiply;
+			transition: color 0.5s ease, background-color 0.5s ease; cursor: pointer;
+		
 		}
 
 		.colagem > .container > div:hover {
 			background-color: white;
+			color: black;
 		}
 
 		.colagem .item1 {
-			background-color: red;
+			background-color: #b37eb6;
 			background-image: url('menu/1.jpg');
 			grid-column: 1;	grid-row: 1 / span 2;
 		}
 		.colagem .item2 {
-			background-color: green;
+			background-color: #7E79B7;
 			background-image: url('menu/2.jpg');
 			grid-column: 2; grid-row: 1 / span 2;
 		}
 		.colagem .item3 {
-			background-color: blue;
+			background-color: #e2d03e;
 			background-image: url('menu/3.jpg');
 			grid-column: 3 / span 2; grid-row: 1;
 		}
 		.colagem .item4 {
-			background-color: cyan;
+			background-color: #e52321;
 			background-image: url('menu/4.jpg');
 			grid-column: 3 / span 2; grid-row: 2;
 		}
 		.colagem .item5 {
-			background-color: magenta;
+			background-color: #e5a486;
 			background-image: url('menu/5.jpg');
 			grid-column: 3 / span 2; grid-row: 3 / span 2;
 		}
 		.colagem .item6 {
-			background-color: yellow;
+			background-color: #85b0d2;
 			background-image: url('menu/6.jpg');
 			grid-column: 2; grid-row: 3 / span 2;
 		}
 		.colagem .item7 {
-			background-color: indigo;
+			background-color: #e52321;
 			background-image: url('menu/7.jpg');
 			grid-column: 1; grid-row: 3;
 		}
 		.colagem .item8 {
-			background-color: crimson;
+			background-color: #e68155;
 			background-image: url('menu/8.jpg');
 			grid-column: 1; grid-row: 4 / span 3;
 		}
 		.colagem .item9 {
-			background-color: deeppink;
+			background-color: #e7e89c;
 			background-image: url('menu/9.jpg');
 			grid-column: 2 / span 2; grid-row: 5 / span 2;
 		}
 		.colagem .item10 {
-			background-color: chartreuse;
+			background-color: #ce609f;
 			background-image: url('menu/10.jpg');
 			grid-column: 4; grid-row: 5;
 		}
 		.colagem .item11 {
-			background-color: lightseagreen;
+			background-color: #e1870c;
 			background-image: url('menu/11.jpg');
 			grid-column: 4; grid-row: 6;
 		}
@@ -89,17 +99,17 @@
 		</section>
 		<section class='colagem'>
 			<div class='container'>
-				<div class="item1"></div>
-				<div class="item2"></div>
-				<div class="item3"></div>
-				<div class="item4"></div>
-				<div class="item5"></div>
-				<div class="item6"></div>
-				<div class="item7"></div>
-				<div class="item8"></div>
-				<div class="item9"></div>
-				<div class="item10"></div>
-				<div class="item11"></div>
+				<div class="item1">cursos</div>
+				<div class="item2">espaço sem nome</div>
+				<div class="item3">literatura</div>
+				<div class="item4">bio+contato</div>
+				<div class="item5">foto comercial</div>
+				<div class="item6">ensaios fotográficos</div>
+				<div class="item7">pesquisa acadêmica</div>
+				<div class="item8">projetos</div>
+				<div class="item9">loja</div>
+				<div class="item10">filmes</div>
+				<div class="item11">process</div>
 			</div>
 		</section>
 	</div>
