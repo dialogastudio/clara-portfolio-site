@@ -25,6 +25,12 @@ body, html {
 	font-family: 'Dosis', sans-serif;	line-height: 1.5rem; color: var(--warm-grey-800);
 }
 
+@media only screen and (min-width: 768px) {
+	main {
+		padding: 0em 3em;
+	}
+}
+
 /*html { margin: 0 !important; }
 #wpadminbar { display: none;}*/
 
@@ -36,10 +42,14 @@ section {
 
 
 /* >> HOME / COLAGEM */
-.colagem > .container {
+section > .container, .colagem > .container {
 	display: flex; flex-direction: column;
 }
+
 @media only screen and (min-width: 768px) {
+	section > .container {
+		width: 100%; 	max-width: 768px;
+	} 
 	.colagem > .container {
 		display: grid;
 		grid-template-columns: 42.44% 27.21% 15.61% 14.71%;
@@ -63,79 +73,95 @@ section {
 	}
 }
 
-.colagem > .container > div:hover {
+/*.colagem > .container > div:hover {
 	background-color: var(--warm-grey-50);
-	/*color: var(--warm-grey-800);*/
-}
+}*/
 @media only screen and (min-width: 768px) {
 	.colagem span {
-		mix-blend-mode: difference
+		mix-blend-mode: difference;
+		color: transparent;
 	}
 }
 
 @media only screen and (min-width: 768px) {
+	.colagem .container div:hover span {
+		color: white;
+		/*text-shadow: white 0px 0px 1.5px, white 0px 0px 1.5px, white 0px 0px 1.5px, white 0px 0px 1.5px, white 0px 0px 1.5px, white 0px 0px 1.5px, white 0px 0px 1.5px, white 0px 0px 1.5px;*/
+	}
+
 	.colagem .item1 {
-		background-color: #b37eb6;
 		background-image: url('menu/1.jpg');
 		grid-column: 1;	grid-row: 1 / span 2;
 	}
+	.colagem .item1:hover { background-color: #b37eb6;	}
+
 	.colagem .item2 {
-		background-color: #7E79B7;
 		background-image: url('menu/2.jpg');
 		grid-column: 2; grid-row: 1 / span 2;
 	}
+	.colagem .item2:hover { background-color: #7E79B7; }
+
 	.colagem .item3 {
-		background-color: #e2d03e;
 		background-image: url('menu/3.jpg');
 		grid-column: 3 / span 2; grid-row: 1;
 	}
+	.colagem .item3:hover { background-color: #e2d03e; }
+
 	.colagem .item4 {
-		background-color: #e52321;
 		background-image: url('menu/4.jpg');
 		grid-column: 3 / span 2; grid-row: 2;
 	}
+	.colagem .item4:hover { background-color: #e52321; }
+
 	.colagem .item5 {
-		background-color: #e5a486;
 		background-image: url('menu/5.jpg');
 		grid-column: 3 / span 2; grid-row: 3 / span 2;
 	}
+	.colagem .item5:hover { background-color: #e5a486; }
+
 	.colagem .item6 {
-		background-color: #85b0d2;
 		background-image: url('menu/6.jpg');
 		grid-column: 2; grid-row: 3 / span 2;
 	}
+	.colagem .item6:hover { background-color: #85b0d2; }
+
 	.colagem .item7 {
-		background-color: #e52321;
 		background-image: url('menu/7.jpg');
 		grid-column: 1; grid-row: 3;
 	}
+	.colagem .item7:hover { background-color: #e52321; }
+
 	.colagem .item8 {
-		background-color: #e68155;
 		background-image: url('menu/8.jpg');
 		grid-column: 1; grid-row: 4 / span 3;
 	}
+	.colagem .item8:hover { background-color: #e68155; }
+
 	.colagem .item9 {
-		background-color: #e7e89c;
 		background-image: url('menu/9.jpg');
 		grid-column: 2 / span 2; grid-row: 5 / span 2;
 	}
+	.colagem .item9:hover { background-color: #e7e89c; }
+
 	.colagem .item10 {
-		background-color: #ce609f;
 		background-image: url('menu/10.jpg');
 		grid-column: 4; grid-row: 5;
 	}
+	.colagem .item10:hover { background-color: #ce609f; }
+
 	.colagem .item11 {
-		background-color: #e1870c;
 		background-image: url('menu/11.jpg');
 		grid-column: 4; grid-row: 6;
 	}
+	.colagem .item11:hover { background-color: #e1870c; }
+
 }
 
 
 
 /* >> HEADER */
 header { z-index: 1000; }
-header > section { flex-direction: row; justify-content: right; }
+header > section { flex-direction: row; justify-content: right; align-items: baseline; }
 header .name { flex: 1; font-size: 1.5em; }
 header .description { display: none; align-items: center; font-size: 0.75em; }
 header .menu { font-size: 1.5em; }
